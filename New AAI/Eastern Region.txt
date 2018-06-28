@@ -1,0 +1,63 @@
+<html>
+
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+    });
+});
+</script>
+ 
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+</head>
+<body background="ii.jpg">
+
+
+
+<div id="flip"><font color="white"> Click to know about CHQ</div>
+<div id="panel"><font color="white">  CHQ is Chautauqua Airlines. CHQ. Corporation d'Hébergement du Québec (French housing development corporation; Canada) CHQ. Cold Heading Quality (wire manufacturing)</div>
+<p style="font-family:Times New Roman; colour:blue; text-align:center; font-size:40px;">CHQ</p>
+
+
+
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<table border="1" align="center">
+  <tr>
+    <th>S.NO.</th>
+    <th>Description</th>
+    <th>Date of Issue<th>
+	<th>Remarks</th>
+ 
+  
+  
+  
+   <tr>
+    <td>PR/02</td>
+    <td>AAI launches welfare programmes for underprivileges:(Hindi)|(English)</td>
+	<td>19-06-2017</td>
+	<td>-</td>
+ 
+  </tr>
+  
+  
+  
+</table>
+</body>
+</html>
+
