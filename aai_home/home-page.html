@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>AAI</title>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" media="all" href="style33.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.slideshow').cycle({
+		fx: 'shuffle', timeout:500, pause: true // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+});
+</script>
+
+<script>
+
+var mcVM_options={menuId:"menu-v",alignWithMainMenu:true};
+/* www.menucool.com/vertical/vertical-menu.*/
+init_v_menu(mcVM_options);function init_v_menu(a){if(window.addEventListener)window.addEventListener("load",function(){start_v_menu(a)},false);else window.attachEvent&&window.attachEvent("onload",function(){start_v_menu(a)})}function start_v_menu(i){var e=document.getElementById(i.menuId),j=e.offsetHeight,b=e.getElementsByTagName("ul"),g=/msie|MSIE 6/.test(navigator.userAgent);if(g)for(var h=e.getElementsByTagName("li"),a=0,l=h.length;a<l;a++){h[a].onmouseover=function(){this.className="onhover"};h[a].onmouseout=function(){this.className=""}}for(var k=function(a,b){if(a.id==i.menuId)return b;else{b+=a.offsetTop;return k(a.parentNode.parentNode,b)}},a=0;a<b.length;a++){var c=b[a].parentNode;c.getElementsByTagName("a")[0].className+=" arrow";b[a].style.left=c.offsetWidth+"px";b[a].style.top=c.offsetTop+"px";if(i.alignWithMainMenu){var d=k(c.parentNode,0);if(b[a].offsetTop+b[a].offsetHeight+d>j){var f;if(b[a].offsetHeight>j)f=-d;else f=j-b[a].offsetHeight-d;b[a].style.top=f+"px"}}c.onmouseover=function(){if(g)this.className="onhover";var a=this.getElementsByTagName("ul")[0];if(a){a.style.visibility="visible";a.style.display="block"}};c.onmouseout=function(){if(g)this.className="";this.getElementsByTagName("ul")[0].style.visibility="hidden";this.getElementsByTagName("ul")[0].style.display="none"}}for(var a=b.length-1;a>-1;a--)b[a].style.display="none"}
+</script>
+
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+
+        /*
+            To remove the "powered by google",
+            uncomment one of the following code blocks.
+            NB: This breaks Google's Attribution Requirements:
+            https://developers.google.com/translate/v2/attribution#attribution-and-logos
+        */
+
+        // Native (but only works in browsers that support query selector)
+        //if(typeof(document.querySelector) == 'function') {
+        //    document.querySelector('.goog-logo-link').setAttribute('style', 'display: none');
+        //    document.querySelector('.goog-te-gadget').setAttribute('style', 'font-size: 0');
+        //}
+
+        // If you have jQuery - works cross-browser - uncomment this
+        //jQuery('.goog-logo-link').css('display', 'none');
+        //jQuery('.goog-te-gadget').css('font-size', '0');
+    }
+</script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<style>
+fieldset{width:35%;}
+
+
+div.polaroid {
+  width: 90%;
+  height:90%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.containerr {
+  text-align: center;
+  padding: 2px 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.slideshow { height: 300px; width: 900px; margin: auto;
+margin-bottom: 0px; }
+.slideshow img {background-color: #eee; }
+
+
+
+.f3{
+    display: -webkit-flex;
+    display: flex;
+	 -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 100%;
+    background-color: white;
+	margin-top: 0px;
+}
+
+
+.f3-item1 {
+    background-color: transparent;
+    width: 70%;
+    margin-left: 10px;
+	margin-right:10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	float: center;
+  background-color: white;
+  margin-bottom: 25px;
+}
+
+
+.f3-item2 {
+    background-color: transparent;
+    width: 25%;
+    margin-left: 10px;
+	margin-right:10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	float: center;
+  background-color: white;
+  margin-bottom: 25px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.fl{
+    display: -webkit-flex;
+    display: flex;
+	 -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 100%;
+    background-color: white;
+	margin-top: 0px;
+}
+
+
+.fl-item1 {
+    background-color: transparent;
+    width: 44%;
+    margin-left: 10px;;
+	margin-right:10px;
+	margin-top: 0px;
+	margin-bottom: auto;
+	
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+.fl-item2 {
+    background-color: transparent;
+    width: 28%;
+    margin-left: 10px;;
+	margin-right:10px;
+	margin-top: 0px;
+	margin-bottom: auto;
+	
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+
+.flex-container {
+
+    display: -webkit-flex;
+    display: flex;
+	 -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 550px;
+    height: 400px;
+    background-color: white;
+}
+
+.flex-item {
+    background-color: #3D148D;
+    width: 150px;
+    height: 170px;
+    margin: 10px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.flex-item1 {
+	margin-top: auto;
+    background-color: #39383A;;
+    width: 150px;
+    height: 130px;
+    margin: 10px;
+	margin-bottom: auto;
+}
+
+.flex-item:hover
+{background-color: #4D1FA9;
+   transform:scale(1.5,1.5);
+   transition-duration: 0.7s;
+   ransition-timing-function: ease;
+}
+.flex-item1:hover
+{background-color: #39383A;;
+   transform:scale(1.5,1.5);
+   transition-duration: 0.7s;
+   ransition-timing-function: ease;
+}
+#i1
+{
+align-self: flex-start;
+}
+#i2
+{
+align-self: flex-end;
+}
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+	background-color: white;
+}
+
+
+.fbox{
+    display: -webkit-flex;
+    display: flex;
+	 -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+	height: 250px;
+    background-color: transparent;
+	margin-top: 0px;
+}
+
+#s2{height: 20em;
+    width: 100%;
+    border: 1px solid gray;
+	
+    background-color: #39383A;
+    }
+	
+	
+ul.a {list-style-position:outside;}
+	
+.fitem1{
+    
+    width: 20%;
+    margin-left: 10px;;
+	margin-right:10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	
+  background-color: white;
+  box-shadow: 0 4px 8px 0 #B4B4B5, 0 6px 20px 0 #EDEDEE;
+  margin-bottom: 25px;
+}
+
+.fitem2{
+    
+    width: 70%;
+    margin-left: 10px;;
+	margin-right:10px;
+	margin-top: 0px;
+	margin-bottom: auto;
+	
+  background-color: transparent;
+  
+  margin-bottom: 25px;
+}
+
+
+
+header{
+    padding: 1em;
+    color: white;
+    background-color: #39383A;
+    clear: left;
+    text-align: center;
+}
+footer {
+    padding:1em;
+    color: white;
+    background-color: #39383A;
+    clear: left;
+    text-align: center;
+}
+
+a:link {
+    color: #39383A;
+	font-family:Cooper Black;
+}
+
+/* visited link */
+a:visited {
+    color: #39383A;
+	font-family:Cooper Black;
+}
+	
+}
+  textarea{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    border-radius: 60px;
+} 
+
+
+#ar2{
+    margin-left: 50px;
+    padding: 1em;
+    overflow: hidden;
+	height:100%;
+	
+	background-color:white;
+}
+
+#b1 {
+    background-color: #39383A;
+	width: 80%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#b2{
+    background-color: #39383A;
+	width :95%;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7C7C7D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+input[type=submit]{
+    background-color: #4587C1; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	border-radius: 60px;
+}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+	}
+	
+#fb:hover, #tw:hover, #my:hover{
+transform:scale(1.3,1.3);
+   transition-duration: 0.4s;
+   ransition-timing-function: ease;}
+</style>
+
+</head>
+<body background="plane.jpg">
+
+	<!-- menu -->
+	<nav><br><br><br>
+		<ul id="menu-v">
+		<li><div id="google_translate_element"></div></li>
+    <li><a href="file:///A:/Projects/Airport/aai/disclaimer.html"><button id="b1">About</button></a></li>
+   
+	<li><a href="file:///A:/Projects/Airport/New%20AAI/FinalAAI1.html"><button id="b1">AAI News&nbsp;&nbsp;<img src="arrow.gif" height="20px" width="20px" style="vertical-align: middle;"></button></a>
+       
+    </li>
+	 
+    <li><a href="#passengers"><button id="b1">Public <br>Info&nbsp;&nbsp;<img src="arrow.gif" height="20px" width="20px" style="vertical-align: middle;"></button></a>
+        <ul class="sub">
+		  <li><a href="#passengers"><button id="b1" style="width:95%;">Commercial <br> Circulars&nbsp;&nbsp;<img src="arrow.gif" height="20px" width="20px" style="vertical-align: middle;"></button></a>
+		  	<ul class="sub">
+               <li><a href="file:///A:/Projects/Airport/MOHINI/Manuals-Policies.html"><button id="b2">Manuals & Policies</button></a></li>
+               <li><a href="file:///C:/Users/main-pc/Desktop/Airport/MOHINI/New%20folder/Rationalization_Licence_Fee_Land_Space.pdf"><button id="b2">Current Rates</button></a></li>
+               <li><a href="file:///A:/Projects/Airport/MOHINI/Standard-Approved-form.html"><button id="b2">Standard & Approved forms</button></a></li>
+               <li><a href="file:///A:/Projects/Airport/MOHINI/Gazette-Notification.html"><button id="b2">Gazette Notifications & Government Policies</button></a></li>
+			</ul>
+		  </li>
+		  <li><a href="file:///A:/Projects/Airport/MOHINI/Documents-Manuals.html"><button id="b2">Documents & Manuals</button></a></li>
+		  <li><a href="file:///A:/Projects/Airport/MOHINI/Standard-Forms.html"><button id="b2">Standard Forms</button></a></li>
+		  <li><a href="file:///A:/Projects/Airport/MOHINI/Public-Notices.html"><button id="b2">Public Notes</button></a></li>
+		  <li><a href="file:///A:/Projects/Airport/MOHINI/Citizen-Charter.html"><button id="b2">Citizen's Character</button></a></li>
+		  <li><a href="file:///A:/Projects/Airport/MOHINI/Database.html"><button id="b2">Databases</button></a></li>
+		  <li><a href="file:///A:/Projects/Airport/MOHINI/Restraint-Issue.html"><button id="b2">Restraint on Issues of Tenders for AAI works</button></a></li>
+
+            
+        </ul>
+    </li>
+	<li><a href="#passengers"><button id="b1">Employees&nbsp;&nbsp;<img src="arrow.gif" height="20px" width="20px" style="vertical-align: middle;"></button></a>
+        <ul class="sub">
+            <li><a href="file:///A:/Projects/Airport/aai/serving_employees.html"><button id="b2">Serving Employees</button></a></li>
+            <li><a href="file:///A:/Projects/Airport/aai/retired_employees.html"><button id="b2">Retired Employees</button></a></li>
+			<li><a href="file:///A:/Projects/Airport/aai/standard_forms.html"><button id="b2">Standard Forms</button></a></li>
+            
+        </ul>
+    </li>
+	<li><a href="#passengers"><button id="b1">Medical Facility&nbsp;&nbsp;<img src="arrow.gif" height="20px" width="20px" style="vertical-align: middle;"></button></a>
+        <ul class="sub">
+		  <li><a href="file:///A:/Projects/Airport/code/ret.html"><button id="b2">Empaneled Hospitals</button></a></li>
+          <li><a href="#passengers"><button id="b1" style="width:95%;">Hospitals <br> near <br> AAI&nbsp;&nbsp;<img src="arrow.gif" height="20px" width="20px" style="vertical-align: middle;"></button></a>
+		  	<ul class="sub">
+               <li><a href="http://www.vmmc-sjh.nic.in/"><button id="b2">Safdarjung Hospital</button></a></li>
+               <li><a href="https://www.aiimsexams.org/"><button id="b2">AIIMS</button></a></li>
+			</ul>
+		  </li>  
+        </ul>
+    </li>
+	<li><a href="#passengers"><button id="b1">Financial&nbsp;&nbsp;<img src="arrow.gif" height="20px" width="20px" style="vertical-align: middle;"></button></a>
+        <ul class="sub">
+            <li><a href="file:///A:/Projects/Airport/lalit/airport_charges.html"><button id="b2">Airport Charges</button></a></li>
+            <li><a href="file:///A:/Projects/Airport/lalit/air_credit.html"><button id="b2">Airport Credit Policy</button></a></li>
+           
+        </ul>
+    </li>
+	
+	
+	</nav>
+
+	<!-- main article -->
+	<article id="ar1">
+
+		<body>
+
+<div class="container">
+
+<header>
+<h1>
+<img src="http://www.aai.aero/public_notices/aaisite_test/part1.gif" align="left" style="margin-left:30px;"/>
+Airport authority of india</h1>
+   <form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
+
+</header>
+<hr>  
+
+
+<article id="ar2">
+<div class="f3">
+<div class="f3-item1">
+<div class="slideshow">
+<div class="polaroid">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Delhi_T3_Int_Terminal.jpg" height="90%" width="90%" /> <div class="containerr">
+    <p>Delhi airport</p>
+  </div></div>
+  <div class="polaroid">
+
+        <img src="http://media2.intoday.in/btmt/images/stories/mumbai-airport505_011114104706.gif" height="90%" width="90%" />
+		<div class="containerr">
+    <p>Mumbai airport</p>
+  </div></div>
+<div class="polaroid">
+
+        <img src="https://www.hellotravel.com/hellotravel/config/images/stories/738X538/bengaluru-international-airport-images-photos-530afa6de4b0b306c6d2faa0.jpg" height="90%" width="90%" />
+<div class="containerr">
+    <p>chennai airport</p>
+  </div></div>
+  <div class="polaroid">
+
+        <img src="https://ichef-1.bbci.co.uk/news/624/cpsprodpb/15944/production/_85988388_85925506.jpg" height="90%" width="90%" /> <div class="containerr">
+    <p>Cochin airport</p>
+  </div></div>
+  
+  <div class="polaroid">
+
+        <img src="http://www.hok.com/uploads/2015/06/09/banalorenew04.jpg" height="90%" width="90%" /> <div class="containerr">
+    <p>Bengaluru airport</p>
+  </div></div>
+  
+  <div class="polaroid">
+
+        <img src="http://hyderabad2014.metropolis.org/sites/default/files/airport.png" height="90%" width="90%" /> <div class="containerr">
+    <p>Hyderabad airport</p>
+  </div></div>
+  
+  <div class="polaroid">
+
+        <img src="http://entecity.com/news/files/2013/09/trivandrum-international-airport-768x398.jpg" height="90%" width="90%" /> <div class="containerr">
+    <p>Trivandrum airport</p>
+  </div></div>
+  
+  <div class="polaroid">
+
+        <img src="http://e36261ef1f37a9aa564c-183246622d51cc66cab6f7d435863a72.r86.cf5.rackcdn.com/wp-content/uploads/2015/05/Kozhikode-Airport-660x298.jpg?0348ca" height="90%" width="90%" /> <div class="containerr">
+    <p>Kozhikode airport</p>
+  </div></div>
+  
+  <div class="polaroid">
+
+        <img src="http://transfers2airports.com/ckfinder/userfiles/images/amritsar%20airport.jpg" height="90%" width="90%" /> <div class="containerr">
+    <p>Amritsar airport</p>
+  </div></div>
+  
+  <div class="polaroid">
+
+        <img src="http://beta.outlooktraveller.com/common/uploads/article/2014/FS_101559201A10049701-03-Kolkata-International-Ai.jpg" height="90%" width="90%" /> <div class="containerr">
+    <p>Kolkata airport</p>
+  </div></div>
+		</div>
+</div>
+<div class="f3-item2"><h4 style="font-family:Cooper Black;">RIGHT TO INFORMATION</h4>
+<br>
+<ul>
+<li><a href="http://www.aai.aero/righttoinformation/cpio.pdf">Appointment of CPIOs/PIOs and Appellate Authorities under RTI Act 2005</a></li><br>
+<li><a href="http://www.aai.aero/righttoinformation/rtiguide.pdf">Guide on the Right to Information Act, 2005</a></li><br>
+<li><a href="http://www.aai.aero/righttoinformation/info_act.pdf">Right to Information Act</a></li><br>
+<li><a href="C:\Users\hp\Downloads/QRLY_REPORT_MOCA.xls">Summary Reports-Case Details</a></li><br>
+<li><a href="http://www.aai.aero/righttoinformation/FILE2ER_061015.pdf">Appointment of PIO in Non-Metro Division of RHQ, Eastern Region. Ord. Dt.29.09.2015 )</a></li>
+</ul>
+</div>
+</div>
+<div class="fl">
+
+<div class="fl-item1">
+
+<legend><h2>QUICK LINKS</h2></legend>
+<div class="flex-container">
+
+  <div class="flex-item" id="i1"><a href="http://www.aai.aero/hindi/GST-call-centre_updated4.pdf" target="_blank"><img src="http://www.aai.aero/public_notices/aaisite_test/GSTAAI.jpg" height="150" width="130" style="padding:10px;"></a></div>
+  <div class="flex-item1" id="i1"><img src="http://www.aai.aero/public_notices/aaisite_test/aai-mag.jpg" height="110" width="130" style="padding:10px;"></a></div>
+  <div class="flex-item" id="i1"><a href="gagan.html" target="_blank"><img src="http://www.aai.aero/public_notices/aaisite_test/gagan.jpg" height="150" width="130" style="padding:10px;"></a></div>
+<p>
+<div class="flex-item1" id="i2"><a href="https://www.onlinefpl.in/" target="_blank"><img src="http://www.aai.aero/public_notices/aaisite_test/flight_plan.gif" height="110" width="130" style="padding:10px;"></a></div>
+  <div class="flex-item" id="i2"><img src="http://www.aai.aero/public_notices/aaisite_test/eaip1.jpg" height="150" width="130" style="padding:10px;"></a></div>
+  <div class="flex-item1" id="i2"><a href="please link all-airports page here" target="_blank"><img src="http://www.aai.aero/public_notices/aaisite_test/EN_Flights_to_Amsterdam_v5_185_tcm277-550553.jpg" height="110" width="130" style="padding:10px;"></a></div>  </p>
+
+  </div>
+</div>
+<div class="fl-item2"><legend><h2>NOTICE BOARD</h2></legend>
+&nbsp;&nbsp;&nbsp;
+<iframe src="iframe.html" height="400px"></iframe>
+</div>
+
+<div class="fl-item2"><legend><h2>RATE OUR WEBSITE</h2></legend>
+<iframe src="rate.html" height="400px"></iframe>
+</div>
+
+</div>
+
+<div id="s2">
+<br><br>
+<div class="fbox">
+<div class="fitem1" style="height:100px;">
+<h4 style="font-family:cursive;">
+<ul class="a">
+<li>AAl Transfer Policy Reg&nbsp;</li>
+<li><a href="http://www.aai.aero/public_notices/aaisite_test/2017-04-18-18042017145702.pdf" target="_blank">From Chairman's Desk&nbsp;</a></li>
+</ul>
+<h4>
+</div>
+<div class="fitem2">
+<h6 align="center" style="font-size:18px; color:white; margin-top:0px;">
+<a href="http://www.aai.aero/misc/AAI_Terms_Conditions.pdf" target="_blank" style="color:white;">Terms and Conditions</a>
+<br><a href="disclaimer.html" target="#ar1" style="color:white;">Disclaimer</a>
+<br><a href="http://www.aai.aero/misc/AAI_Privacy_Policy.pdf" target="_blank" style="color:white;">Privacy Policy</a>
+</h6>
+</div>
+<div class="fitem1" height="100px;">
+<h5 style="font-family:cursive;" align="center">FOLLOW US:</h5>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/AAINEWDELHI/" target="_blank"><img src="http://www.medical-esthet.cz/public/img/fb_icon.png" id="fb" height="50px" width="50px"/></a>
+<a href="https://www.facebook.com/AAINEWDELHI/"  target="_blank"><img src="http://playbookathlete.com/wp-content/uploads/2016/10/twitter-logo-4.png" height="40px" id="tw"width="40px"/></a>
+<a href="https://www.mygov.in/#" target="_blank"><img src="https://www.mygov.in//sites/all/themes/mygov/images/logo.png" id="my" height="40px" width="40px"/></a>
+</div>
+<div class="fitem2">
+<h6 style="font-size:14px;color:white; margin-left:30px; margin-top:0px; margin-right:auto;">Airports Authority of India (AAI) was constituted by an Act of Parliament and came into being	on 1st April 1995 by merging erstwhile National Airports Authority and International Airports	Authority of India. The merger brought into existence a single Organization entrusted with the	responsibility of creating, upgrading, maintaining and managing civil aviation infrastructure both	on the ground and air space in the country.
+AAI manages 125 airports, which include 18 International Airport, 07 Customs Airports, 78	Domestic Airports and 26 Civil Enclaves at Defense airfields. AAI provides air navigation services over 2.8 million square nautical miles of air space. During the year 2013-14, AAI	handled aircraft movement of 1536.60 Thousand,	Passengers handled 168.91 Million and the cargo	handled 2279.14 thousand MT.
+</h6>
+</div>
+</div>
+</div>
+</article>
+</div>
+<footer>
+<h3 style="color: white;">
+<pre>
+Corporate Office : 
+Airports Authority of India, Rajiv Gandhi Bhawan,
+Safdarjung Airport, New Delhi-110003 Ph : 91-11-24632950
+</pre>
+</h3>
+</footer>
+
+
+	</article>
+
+</body>
+</html>
